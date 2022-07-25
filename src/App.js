@@ -1,13 +1,30 @@
-//fix branch
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [elemList, setElemList] = useState([]);
 
+  useEffect(() => {
+    setTitle("");
+  }, [elemList]);
+
   return (
     <div className="App">
+      <div>{title}</div>
+      <div>
+        <button
+          onClick={() => {
+            setTitle(Date.now);
+          }}
+        >
+          CLICK ME HEHEHEEHEHE
+        </button>
+        <br />
+        <br />
+        <br />
+      </div>
       <label htmlFor="todos">What todo</label>
       <input
         type="text"
@@ -34,6 +51,7 @@ function App() {
         {elemList.map((elem) => {
           return <li key={elem.id}>{elem.text}</li>;
         })}
+        {/* Feature branch */}
       </div>
     </div>
   );
