@@ -31,7 +31,7 @@ function App() {
       </button>
       <div>
         {elemList.map((elem) => {
-          return <li key={elem.id}>{elem.text}</li>;
+          return <li key={elem.id}>{elem.text.toUpperCase()}</li>;
         })}
       </div>
     </div>
