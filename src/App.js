@@ -1,4 +1,3 @@
-//feature branch
 import "./App.css";
 import { useEffect, useState } from "react";
 
@@ -50,7 +49,7 @@ function App() {
       </button>
       <div>
         {elemList.map((elem) => {
-          return <li key={elem.id}>{elem.text.toUpperCase()}</li>;
+          return <li key={elem.id}>{elem.text}</li>;
         })}
         {/* Feature branch */}
       </div>
